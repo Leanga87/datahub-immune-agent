@@ -28,10 +28,10 @@ deciding whether to raise a high-priority incident.
 ## How it works
 
 1. `read_lineage.py` — reads downstream lineage from a given dataset.
-2. `evaluar_criticidad.py` — reads tags and decides severity.
+2. `evaluate_criticality.py` — reads tags and decides severity.
 3. `immune_agent.py` — combines both steps and raises a real Incident in
    DataHub via GraphQL.
-4. `pipeline_simulado.py` — simulates a pipeline step that checks for
+4. `pipeline_check.py` — simulates a pipeline step that checks for
    active incidents before processing, and halts if one is found.
 
 ## Setup
@@ -53,8 +53,9 @@ source venv/bin/activate
 pip install acryl-datahub requests
 
 # 4. Run the full flow
+# 4. Run the full flow
 python immune_agent.py       # detects, reasons, raises incident
-python pipeline_simulado.py  # confirms the pipeline halts
+python pipeline_check.py     # confirms the pipeline halts
 ```
 
 ## Known Limitations
