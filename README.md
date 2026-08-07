@@ -33,6 +33,9 @@ deciding whether to raise a high-priority incident.
    DataHub via GraphQL.
 4. `pipeline_check.py` — simulates a pipeline step that checks for
    active incidents before processing, and halts if one is found.
+5. `mcp_lineage.py` — demonstrates the same downstream lineage lookup 
+   performed through the official DataHub MCP Server (Model Context 
+   Protocol), confirming compatibility with MCP-based agent workflows.
 
 ## Setup
 
@@ -68,4 +71,6 @@ hardening.
 ## License
 
 Apache 2.0
+
+
 
